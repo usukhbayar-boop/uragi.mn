@@ -67,6 +67,6 @@ export default function Term() {
                     </div>
                 </div>
             </Layout>
-        </>
+        </>                 
     )
 }
