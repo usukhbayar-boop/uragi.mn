@@ -17,7 +17,7 @@ export default function PricingOne() {
                                 </div>
                                 <h2 className="sectionHeading__title">Үнийн санал</h2>
                             </div>
-                            <div className="price-switch mt-32 justify-center">
+                            {/* <div className="price-switch mt-32 justify-center">
                                 <span>Monthly</span>
                                 <div className="form-switch">
                                     <div className="switch" onClick={handlePricing}>
@@ -26,12 +26,12 @@ export default function PricingOne() {
                                     </div>
                                 </div>
                                 <span>Annually Save 30%</span>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                     <div className="row x-gap-32 y-gap-32 layout-pt-sm">
                         <div className="col-lg-4 col-md-6">
-                            <div>
+                            {/* <div>
                                 <div className="relative rounded-16 pt-80 pb-60 px-40 text-center bg-white border-light">
                                     <div className="text-xl lh-1 fw-600">Basic</div>
                                     <div className="switch-content js-switch-content">
@@ -74,43 +74,39 @@ export default function PricingOne() {
                                         </Link>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                         <div className="col-lg-4 col-md-6">
                             <div>
                                 <div className="relative rounded-16 pt-80 pb-60 px-40 text-center bg-light-4">
                                     <div className="badge absolute-x-center top-30 bg-accent text-white">
-                                        Most Popular
+                                        Танд санал болгох
                                     </div>
-                                    <div className="text-xl lh-1 fw-600">Professional</div>
+                                    <div className="text-xl lh-1 fw-600">Үндсэн</div>
                                     <div className="switch-content js-switch-content">
-                                        <h3 className="text-3xl fw-700 mt-4">${pricing ? "599.95" : "899.95"}</h3>
+                                        <h3 className="text-3xl fw-700 mt-4">₮{pricing ? "20'000" : "20'000"}</h3>
                                     </div>
-                                    <div className="">per month</div>
+                                    <div className="">Насан туршид</div>
                                     <p className="text-left mt-32">
-                                        Standard listing submission, active for
-                                        <br /> 30 days.
+                                        Нэг худалдан авсан бол насан туршдаа
+                                        <br />
                                     </p>
                                     <ul className="y-gap-18 pt-32">
                                         <li className="d-flex items-center">
                                             <Icon.Check className="size-14 mr-10" />
-                                            <p className="lh-13">All Operating Supported</p>
+                                            <p className="lh-13">Нэг загвар ашиглах эрх</p>
                                         </li>
                                         <li className="d-flex items-center">
                                             <Icon.Check className="size-14 mr-10" />
-                                            <p className="lh-13">Great Interface</p>
+                                            <p className="lh-13">Хадгалах, татаж авах</p>
                                         </li>
                                         <li className="d-flex items-center">
                                             <Icon.Check className="size-14 mr-10" />
-                                            <p className="lh-13">Allows encryption</p>
+                                            <p className="lh-13">Өргөтгөх</p>
                                         </li>
                                         <li className="d-flex items-center">
                                             <Icon.Check className="size-14 mr-10" />
-                                            <p className="lh-13">Face recognized system</p>
-                                        </li>
-                                        <li className="d-flex items-center">
-                                            <Icon.Check className="size-14 mr-10" />
-                                            <p className="lh-13">24/7 Full support</p>
+                                            <p className="lh-13">Бусдад дамжуулах</p>
                                         </li>
                                     </ul>
                                     <div className="d-flex justify-center mt-40">
@@ -119,13 +115,13 @@ export default function PricingOne() {
                                             href="pricing"
                                             className="button -md -accent text-white -uppercase"
                                         >
-                                            Get started
+                                            Худалдан авах
                                         </Link>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-4 col-md-6">
+                        {/* <div className="col-lg-4 col-md-6">
                             <div>
                                 <div className="relative rounded-16 pt-80 pb-60 px-40 text-center bg-white border-light">
                                     <div className="text-xl lh-1 fw-600">Business</div>
@@ -170,7 +166,7 @@ export default function PricingOne() {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </section>

@@ -34,7 +34,8 @@ export default function TestimonialSliderOne() {
             >
                 <SwiperSlide className="swiper-slide">
                     <div className="testimonials -small">
-                        <h4 className="testimonials__title text-xl fw-600 text-dark-1">
+                        <img src='/img/clients/tree-1.png' alt="tree-1" style={{width: 300}} />
+                        {/* <h4 className="testimonials__title text-xl fw-600 text-dark-1">
                             Design Quality
                         </h4>
                         <p className="testimonials__text mt-20">
@@ -49,10 +50,52 @@ export default function TestimonialSliderOne() {
                             <div className="testimonials__position">
                                 Борлуулалтын менежер
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </SwiperSlide>
                 <SwiperSlide className="swiper-slide">
+                    <div className="testimonials -small">
+                        <img src='/img/clients/tree-2.png' alt="tree-2" style={{width: 300}} />
+                        {/* <h4 className="testimonials__title text-xl fw-600 text-dark-1">
+                            Design Quality
+                        </h4>
+                        <p className="testimonials__text mt-20">
+                            The template is really nice and offers quite a large set of
+                            options. It’s beautiful and the coding is done quickly and
+                            seamlessly. Thank you!
+                        </p>
+                        <div className="testimonials__author mt-24">
+                            <div className="testimonials__name text-lg fw-600 text-dark-1">
+                                Б.Өсөхбаяр
+                            </div>
+                            <div className="testimonials__position">
+                                Борлуулалтын менежер
+                            </div>
+                        </div> */}
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide className="swiper-slide">
+                    <div className="testimonials -small">
+                        <img src='/img/clients/tree-3.jpg' alt="tree-3" style={{width: 300}} />
+                        {/* <h4 className="testimonials__title text-xl fw-600 text-dark-1">
+                            Design Quality
+                        </h4>
+                        <p className="testimonials__text mt-20">
+                            The template is really nice and offers quite a large set of
+                            options. It’s beautiful and the coding is done quickly and
+                            seamlessly. Thank you!
+                        </p>
+                        <div className="testimonials__author mt-24">
+                            <div className="testimonials__name text-lg fw-600 text-dark-1">
+                                Б.Өсөхбаяр
+                            </div>
+                            <div className="testimonials__position">
+                                Борлуулалтын менежер
+                            </div>
+                        </div> */}
+                    </div>
+                </SwiperSlide>
+                {/* <SwiperSlide className="swiper-slide">
                     <div className="testimonials -small">
                         <h4 className="testimonials__title text-xl fw-600 text-dark-1">
                             Design Quality
@@ -111,7 +154,7 @@ export default function TestimonialSliderOne() {
                             </div>
                         </div>
                     </div>
-                </SwiperSlide>
+                </SwiperSlide> */}
             </Swiper>
 
             <div className="nav -slider justify-end md:justify-start mt-60 md:mt-32">

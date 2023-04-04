@@ -5,7 +5,7 @@ import ProfileForm from '@/components/profile/profile-form';
 // import ProfileContact from '@/components/profile/profile-contact';
 // import Seo from '@/components/seo/seo';
 // import { useUser } from '@/framework/user';
-import DashboardLayout from '@/layout/_dashboard';
+import DashboardLayout from '@/layouts/_dashboard';
 // export { getStaticProps } from '@/framework/general.ssr';
 
 const ProfilePage = () => {

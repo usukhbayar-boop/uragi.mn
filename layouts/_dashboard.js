@@ -1,5 +1,5 @@
 import DashboardSidebar from '@/components/dashboard/sidebar';
-import GeneralLayout from '@/components/layouts/_general';
+import GeneralLayout from '@/components/layout/_general';
 import classNames from 'classnames';
 
 

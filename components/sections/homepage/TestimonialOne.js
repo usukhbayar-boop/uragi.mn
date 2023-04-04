@@ -11,7 +11,7 @@ export default function TestimonialOne() {
                                 <div className="sectionHeading__subtitle wow animate__animated animate__fadeInUp">
                                     <span>Онлайн хувилбар</span>
                                 </div>
-                                <h2 className="sectionHeading__title wow animate__animated animate__fadeInUp">Хэрэглэгчдийн сэтгэгдэл</h2>
+                                <h2 className="sectionHeading__title wow animate__animated animate__fadeInUp">Ургийн бичгийн загвар</h2>
                             </div>
                         </div>
                         <div className="col-xl-8 col-lg-8">
