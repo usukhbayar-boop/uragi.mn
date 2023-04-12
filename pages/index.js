@@ -31,9 +31,10 @@ export default function Home1() {
                 {/* <BenefitsOne /> */}
                 <SuccessOne />
                 {/* <FeatureOne /> */}
-                <TestimonialOne />
+                
                 <CounterOne />
-                <AppOne />
+                {/* <AppOne /> */}
+                <TestimonialOne />
                 <PricingOne />
                 <FaqOne />
                 {/* <CtaOne /> */}
