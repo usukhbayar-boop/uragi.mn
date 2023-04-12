@@ -23,7 +23,7 @@ export default function Header3({ navColor, logo, scroll, navToggled, navHandle 
                         <div className="col-auto">
                             <div className="header__right">
                                 <div className="md:d-none">
-                                    <Link href="/login" className="button -sm -light-4 text-dark-1">Sign In</Link>
+                                    <Link href="/login" className="button -sm -light-4 text-dark-1">Гарах</Link>
                                 </div>
                                 <div className="header__menu justify-center items-center relative d-none md:d-flex" onClick={navHandle}>
                                     <button type="button" className={`d-flex items-center justify-center js-nav-open ${navToggled ? "pointer-events-none opac-0" : "opac-1"}`} onClick={navHandle}>
