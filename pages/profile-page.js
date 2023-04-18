@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import Layout from '@/components/layout/Layout';
 import Link from "next/link";
+import { useRouter} from "next/router";
 import { TrustProductsEvaluationsInstance } from 'twilio/lib/rest/trusthub/v1/trustProducts/trustProductsEvaluations';
 
 export default function ProfilePage() {
 
+    const router = useRouter();
     const [isActiveFirst, setIsActiveFirst] = useState(true);
     const [isActiveSecond, setIsActiveSecond] = useState(false);
     const [isActiveThird, setIsActiveThird] = useState(false);
@@ -23,6 +25,11 @@ export default function ProfilePage() {
         setShowResults(true)
         setIsActiveFirst(false)
         setIsActiveSecond(current => !current);
+    }
+
+    const signOut = () => {
+        sessionStorage.clear();
+        router.push('/login');
     }
     return (
         <>
@@ -64,12 +71,8 @@ export default function ProfilePage() {
                 <a href="">Тохиргоо</a>
                 <hr align="center"/>
             </div>
-            <div className="url">
-                <Link
-              href="/"
-            >
+            <div className="url" onClick={signOut}>
               Гарах
-            </Link>
                 <hr align="center"/>
             </div>
         </div>

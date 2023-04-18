@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import * as Icon from 'react-feather';
 import Logo from './Logo';
@@ -5,6 +6,18 @@ import Menu from './Menu';
 import MenuMobile from './MenuMobile';
 
 export default function Header4({ navColor, logo, scroll, navToggled, navHandle }) {
+    //let token = sessionStorage.getItem('UragiToken');
+    let loginLink = <Link href="/profile-page" className="button -sm -green text-white">Профайл</Link>;
+    
+    useEffect(() => {
+        let token = sessionStorage.getItem('UragiToken');
+        
+    
+        if(!token) {
+            loginLink = <Link href="/login" className="button -sm -green text-white">Нэвтрэх</Link>;
+        }
+    }, [])
+
     return (
         <>
             <header className={`header -container js-header ${scroll ? "is-sticky" : ""}`}>
@@ -21,7 +34,7 @@ export default function Header4({ navColor, logo, scroll, navToggled, navHandle 
                                         <MenuMobile navToggled={navToggled} />
                                     </div>
                                     <div className="md:d-none ml-30">
-                                        <Link href="/login" className="button -sm -green text-white">Нэвтрэх</Link>
+                                        {loginLink} 
                                     </div>
                                     <div className="header__menu justify-center items-center relative d-none md:d-flex" onClick={navHandle}>
                                         <button type="button" className={`d-flex items-center justify-center js-nav-open ${navToggled ? "pointer-events-none opac-0" : "opac-1"}`} onClick={navHandle}>

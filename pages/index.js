@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 import Layout from '@/components/layout/Layout';
 import AboutOne from '@/components/sections/homepage/AboutOne';
 import AppOne from '@/components/sections/homepage/AppOne';
@@ -13,10 +14,18 @@ import PricingOne from '@/components/sections/homepage/PricingOne';
 import SuccessOne from '@/components/sections/homepage/SuccessOne';
 import TestimonialOne from '@/components/sections/homepage/TestimonialOne';
 import { app, database } from "../firebaseConfig";
-
+import { useRouter} from "next/router";
 
 
 export default function Home1() {
+    let router = useRouter();
+    // useEffect(() => {
+    //     let token = sessionStorage.getItem('Token');
+    
+    //     if(token) {
+          
+    //     }
+    //   }, [])
     return (
         <>
             <Layout

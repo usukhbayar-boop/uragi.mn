@@ -4,9 +4,12 @@ import Link from 'next/link';
 import * as Icon from 'react-feather'; 
 import {app, database} from "../firebaseConfig";
 import {collection, addDoc, getDocs, doc, updateDoc, deleteDoc} from "firebase/firestore";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { useRouter} from "next/router";
 
 export default function Login() {
-
+    const auth = getAuth();
+    const router = useRouter();
     const [error, setError] = useState(false);
     const [error1, setError1] = useState(false);
     const [error2, setError2] = useState(false);
@@ -32,27 +35,43 @@ export default function Login() {
         if(data.number == "" || data.password == "") {
             setError(true);
         } else {
-            getDocs(collectionRef).then((res) => {
-                let isHavePhone = true;
-                let isPasswordTrue = true;
-                let arr = res.docs.map((item) => {
-                    // return {...item.data(), id: item.id};
-                    if(data.number.toString() === item.data().phone) {
-                        isHavePhone = false;
-                        if(data.password.toString() === item.data().password) {
-                            isPasswordTrue = false;
-                            window.location.href = "/profile-page";
-                        }
-                    }
-                });
-                if(isHavePhone) {
+            let email = data.number + "@uragi.mn";
+            let password = data.password;
+            signInWithEmailAndPassword(auth, email, password)
+            .then((response) => {
+                console.log(response);
+                sessionStorage.setItem('UragiToken', response.user.accessToken);
+                router.push('/profile-page');
+            }).catch((err) => {
+                if(err.message == "Firebase: Error (auth/user-not-found).") {
                     setError1(true);
-                }
-                if(isPasswordTrue) {
+                } else if(err.message == "Firebase: Error (auth/wrong-password).") {
                     setError2(true);
+                } else {
+                    alert("Алдаа: "+err.message);
                 }
-                
             })
+            // getDocs(collectionRef).then((res) => {
+            //     let isHavePhone = true;
+            //     let isPasswordTrue = true;
+            //     let arr = res.docs.map((item) => {
+            //         // return {...item.data(), id: item.id};
+            //         if(data.number.toString() === item.data().phone) {
+            //             isHavePhone = false;
+            //             if(data.password.toString() === item.data().password) {
+            //                 isPasswordTrue = false;
+            //                 window.location.href = "/profile-page";
+            //             }
+            //         }
+            //     });
+            //     if(isHavePhone) {
+            //         setError1(true);
+            //     }
+            //     if(isPasswordTrue) {
+            //         setError2(true);
+            //     }
+                
+            // })
         }
 
         

@@ -12,6 +12,8 @@ import Link from 'next/link';
 import { SettingsUpdateInstance } from 'twilio/lib/rest/supersim/v1/settingsUpdate';
 import { collection, addDoc } from "firebase/firestore";
 import { app, database } from "../firebaseConfig";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { useRouter} from "next/router";
 
 const CssTextField = styled(TextField)({
     '& label.Mui-focused': {
@@ -49,6 +51,8 @@ const style = {
 
 export default function Register() {
 
+  const auth = getAuth();
+  const router = useRouter();
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => {
     setOpen(true);
@@ -68,6 +72,15 @@ export default function Register() {
   const errorScript2 = "Нууц үг нь 8 тэмдэгтээс багагүй байх ёстой";
 
   const collectionRef = collection(database, 'users');
+
+
+  // useEffect(() => {
+  //   let token = sessionStorage.getItem('Token');
+
+  //   if(token) {
+  //     router.push('/home');
+  //   }
+  // }, [])
 
     // Handles the submit event on form submit.
   const handleSubmit = async (event) => {
@@ -133,17 +146,23 @@ export default function Register() {
   // Firebase-руу бүртгэх кодыг энд бичнэ
   function sendCode() {
     if(twilioCode == smsCode) {
-        addDoc(collectionRef, {
-            phone: inputData.number,
-            password: inputData.password
-        })
-        .then(()=>{
-            window.location.href = "/portfolio";
+      let email = inputData.number + "@uragi.mn"
+      let password = inputData.password;
+      createUserWithEmailAndPassword(auth, email, password)
+        .then((response)=>{
+            // sessionStorage.setItem('Token', response.user.accessToken);
+            router.push('/portfolio');
         })
         .catch(err=>{
+          if(err.message == "Firebase: Error (auth/email-already-in-use).") {
+            alert("Бүртгэлтэй хаяг байна! Та өөр дугаараар бүртгүүлнэ үү!");
+          } else {
             alert("Алдаа гарлаа: "+err.message);
+          }
         })
-    } 
+    } else {
+      alert("Баталгаажуулах код буруу!")
+    }
     // return false
      
   }
