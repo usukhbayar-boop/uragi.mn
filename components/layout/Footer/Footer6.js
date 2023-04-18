@@ -113,7 +113,7 @@ export default function Footer6() {
                         </div>
                         <div className="row justify-center py-30 mt-40">
                             <div className="col-auto">
-                                <div className="footer__bottom_text">© Copyright 2023. Ургийн бичиг - онлайн хувилбар by MateX LLC</div>
+                                <div className="footer__bottom_text">© Copyright 2023. Ургийн бичиг - онлайн хувилбар</div>
                             </div>
                         </div>
                     </div>

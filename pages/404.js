@@ -15,7 +15,7 @@ export default function Page404() {
                                 <div className="no-page__content text-center">
                                     <h1 className="no-page__title">404</h1>
                                     <h3 className="no-page__subtitle text-3xl fw-700">Oops...</h3>
-                                    <p className="mt-30">We're sorry, but something went wrong.</p>
+                                    <p className="mt-30">Таны хайсан хуудас олдсонгүй</p>
                                     <div className="no-page__button mt-30">
                                         <Link href="/" className="button col-lg-3 -md -accent -uppercase text-white">Back to homepage</Link>
                                     </div>

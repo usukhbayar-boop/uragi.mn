@@ -1,8 +1,140 @@
+import React, { useState, useEffect } from 'react';
 import Layout from '@/components/layout/Layout';
 import Link from 'next/link';
-import * as Icon from 'react-feather';
+import * as Icon from 'react-feather'; 
+import {app, database} from "../firebaseConfig";
+import {collection, addDoc, getDocs, doc, updateDoc, deleteDoc} from "firebase/firestore";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { useRouter} from "next/router";
 
 export default function Login() {
+    const auth = getAuth();
+    const router = useRouter();
+    const [error, setError] = useState(false);
+    const [error1, setError1] = useState(false);
+    const [error2, setError2] = useState(false);
+
+    const errorScript = "Шаардлагатай талбаруудыг бөглөнө үү!!!";
+    const errorScript1 = "Бүртгэлгүй хэрэглэгч байна!!!";
+    const errorScript2 = "Нууц үг буруу байна!";
+
+    const collectionRef = collection(database, "users")
+
+    const getData = (event) => {
+        event.preventDefault();
+
+        setError(false);
+        setError1(false);
+        setError2(false);
+
+        const data = {
+            number: event.target.phone.value,
+            password: event.target.password.value
+        }
+
+        if(data.number == "" || data.password == "") {
+            setError(true);
+        } else {
+            let email = data.number + "@uragi.mn";
+            let password = data.password;
+            signInWithEmailAndPassword(auth, email, password)
+            .then((response) => {
+                console.log(response);
+                sessionStorage.setItem('UragiToken', response.user.accessToken);
+                router.push('/profile-page');
+            }).catch((err) => {
+                if(err.message == "Firebase: Error (auth/user-not-found).") {
+                    setError1(true);
+                } else if(err.message == "Firebase: Error (auth/wrong-password).") {
+                    setError2(true);
+                } else {
+                    alert("Алдаа: "+err.message);
+                }
+            })
+            // getDocs(collectionRef).then((res) => {
+            //     let isHavePhone = true;
+            //     let isPasswordTrue = true;
+            //     let arr = res.docs.map((item) => {
+            //         // return {...item.data(), id: item.id};
+            //         if(data.number.toString() === item.data().phone) {
+            //             isHavePhone = false;
+            //             if(data.password.toString() === item.data().password) {
+            //                 isPasswordTrue = false;
+            //                 window.location.href = "/profile-page";
+            //             }
+            //         }
+            //     });
+            //     if(isHavePhone) {
+            //         setError1(true);
+            //     }
+            //     if(isPasswordTrue) {
+            //         setError2(true);
+            //     }
+                
+            // })
+        }
+
+        
+    }
+
+    const updateData = (event) => {
+        event.preventDefault()
+        const docToUpdate = doc(database, "users", "x9LxokdgrsG3ldJOfXAt");
+        updateDoc(docToUpdate, {
+            phone: "99125262",
+            password: "94948106"
+        })
+        .then(() => {
+            alert("Data Updated")
+        })
+        .catch((err) => {
+            alert(err.message);
+        })
+    }
+
+    // const handleSubmit = async (event) => {
+    //     // Stop the form from submitting and refreshing the page.
+    //     event.preventDefault()
+    
+    //     // Get data from the form.
+    //     const data = {
+    //       number: event.target.phone.value,
+    //       first: event.target.password.value,
+    //     }
+
+    //     if(data.number === "" || data.first === "") {
+    //         setError1(true);
+    //     } else {
+    //         window.location.href = "/profile-page";
+    //     }
+    
+    
+    //     // // Send the data to the server in JSON format.
+    //     // const JSONdata = JSON.stringify(data)
+    
+    //     // // API endpoint where we send form data.
+    //     // const endpoint = '/api/form'
+    
+    //     // // Form the request for sending data to the server.
+    //     // const options = {
+    //     //   // The method is POST because we are sending data.
+    //     //   method: 'POST',
+    //     //   // Tell the server we're sending JSON.
+    //     //   headers: {
+    //     //     'Content-Type': 'application/json',
+    //     //   },
+    //     //   // Body of the request is the JSON data we created above.
+    //     //   body: JSONdata,
+    //     // }
+    
+    //     // // Send the form data to our forms API on Vercel and get a response.
+    //     // const response = await fetch(endpoint, options)
+    
+    //     // // Get the response data from server as JSON.
+    //     // // If server returns the name submitted, that means the form works.
+    //     // const result = await response.json()
+        
+    //   }
     return (
         <>
             <Layout
@@ -27,9 +159,10 @@ export default function Login() {
                             <div className="md:container py-48">
                                 <h1 className="text-4xl md:text-3xl">Нэвтрэх</h1>
                                 <p className="mt-16">Бүртгүүлж амжаагүй бол энд дарна уу? <Link className="decoration-none text-accent fw-600" href="register">Бүргүүлэх</Link></p>
-                                <form className="contact-form row y-gap-32 pt-48" action="#">
+                                <form className="contact-form row y-gap-32 pt-48" onSubmit={getData}>
+                                {/* action="#" */}
                                     <div className="col-12">
-                                        <input type="text" name="name" placeholder="Утасны дугаар" />
+                                        <input type="text" name="phone" placeholder="Утасны дугаар" />
                                     </div>
                                     <div className="col-12">
                                         <input type="password" name="password" placeholder="Нууц үг" />
@@ -54,6 +187,9 @@ export default function Login() {
                                             </div>
                                         </div>
                                     </div>
+                                    {error && <div style={{color: "red"}}>{errorScript}</div>}
+                                    {error1 && <div style={{color: "red"}}>{errorScript1}</div>}
+                                    {error2 && <div style={{color: "red"}}>{errorScript2}</div>}
                                     <div className="col-12">
                                         <button type="submit" name="submit" id="submit" className="button -md -accent -uppercase text-white">
                                             Нэвтрэх
