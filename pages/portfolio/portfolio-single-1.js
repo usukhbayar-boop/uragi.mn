@@ -13,20 +13,20 @@ export default function PortfolioSingle1() {
                                 <div className="row justify-center text-center">
                                     <div className="col-xl-6 col-lg-9 col-md-10">
                                         <div>
-                                            <h1 className="page-header__title lh-14">Gecko Mobile App</h1>
+                                            <h1 className="page-header__title lh-14">Ургийн бичгийн загварууд</h1>
                                         </div>
                                     </div>
                                     <div className="w-1/1" />
                                     <div className="col-xl-5 col-lg-9 col-md-10">
-                                        <div className="px-20">
+                                        {/* <div className="px-20">
                                             <p className="page-header__text">Dicta sunt explicabo. Nemo ipsam voluptatem quia voluptas aspernatur aut odit aut fugit, sed quia. Dicta sunt explicabo. Nemo enim ipsam voluptas aspernatur aut odit.</p>
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </section>
-                    <section className="layout-pt-lg layout-pb-sm">
+                    {/* <section className="layout-pt-lg layout-pb-sm">
                         <div className="container">
                             <div className="row justify-center">
                                 <div className="col-xl-10 col-lg-11 px-0 md:px-16">
@@ -65,11 +65,11 @@ export default function PortfolioSingle1() {
                                 </div>
                             </div>
                         </div>
-                    </section>
+                    </section> */}
                     <section>
-                        <div className="bg-image js-lazy pt-100 pb-100 mh-700 bg-fixed" style={{ backgroundImage: 'url("/img/portfolio/single/1/1.jpg")' }} />
+                        <div className="bg-image js-lazy pt-100 pb-100 mh-700 bg-fixed" style={{ backgroundImage: 'url("/img/about-1/about/gene.jpg")' }} />
                     </section>
-                    <section className="layout-pt-lg layout-pb-sm">
+                    {/* <section className="layout-pt-lg layout-pb-sm">
                         <div className="container">
                             <div className="row justify-center">
                                 <div className="col-xl-9 col-lg-11">
@@ -102,37 +102,81 @@ export default function PortfolioSingle1() {
                                 </div>
                             </div>
                         </div>
-                    </section>
-                    <section className="layout-pt-sm layout-pb-sm">
-                        <div className="container">
-                            <div className="row y-gap-48 justify-between items-center">
-                                <div className="col-xl-6 col-lg-6">
-                                    <img src="/img/portfolio/single/1/2.jpg" alt="image" className="initial-img" />
-                                </div>
-                                <div className="col-xl-5 col-lg-6">
-                                    <div className="sectionHeading ">
-                                        <h2 className="sectionHeading__title">Put money in your hands</h2>
-                                    </div>
-                                    <p className="mt-24">We develop enjoyable consumer experiences, from digital strategy and content to media and analysis. Leading to meaningful results and satisfied clients.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+                    </section> */}
                     <section className="layout-pt-sm layout-pb-lg">
                         <div className="container">
-                            <div className="row y-gap-48 justify-between items-center">
-                                <div className="col-xl-5 col-lg-6 order-lg-1 order-2">
-                                    <div className="sectionHeading ">
-                                        <h2 className="sectionHeading__title">Put money in your hands</h2>
-                                    </div>
-                                    <p className="mt-24">We develop enjoyable consumer experiences, from digital strategy and content to media and analysis. Leading to meaningful results and satisfied clients.</p>
+                            <div className="row y-gap-32">
+                                <div className="col-md-6">
+                                    {/* <img className="initial-img" src="/img/portfolio/single/3/1.jpg" alt="image"  /> */}
+                                    <Link href="img/portfolio/single/4/1.jpg" className="gallery__item js-gallery" data-gallery="gallery1">
+                                    <div className="ratio ratio-57:60">
+                                                    <img className="absolute-full-center object-fit-cover" src="/img/about-1/about/tree-1.jpg" alt="image"  />
+                                                </div>
+                                                <div className="gallery__button">
+                                                    <Icon.Plus className="icon" />
+                                                </div>
+                                                </Link>
                                 </div>
-                                <div className="col-xl-6 col-lg-6 order-lg-2 order-1">
-                                    <img src="/img/portfolio/single/1/3.jpg" alt="image" className="initial-img" />
+                                <div className="col-md-6">
+                                <Link href="img/portfolio/single/4/1.jpg" className="gallery__item js-gallery" data-gallery="gallery1">
+                                    <div className="ratio ratio-57:60">
+                                                    <img className="absolute-full-center object-fit-cover" src="/img/about-1/about/tree-2.jpg" alt="image"  />
+                                                </div>
+                                                <div className="gallery__button">
+                                                    <Icon.Plus className="icon" />
+                                                </div>
+                                                </Link>
+                                </div>
+                                {/* <div className="col-12">
+                                <a href="img/portfolio/single/4/1.jpg" className="gallery__item js-gallery" data-gallery="gallery1">
+                                    <div className="ratio ratio-57:60">
+                                                    <img className="absolute-full-center object-fit-cover" src="/img/about-1/about/tree-3.webp" alt="image"  />
+                                                </div>
+                                                <div className="gallery__button">
+                                                    <Icon.Plus className="icon" />
+                                                </div>
+                                                </a>
+                                </div> */}
+                                <div className="col-lg-4 col-md-6">
+                                    <div className="ratio ratio-37:40">
+                                    <Link href="img/portfolio/single/4/1.jpg" className="gallery__item js-gallery" data-gallery="gallery1">
+                                    <div className="ratio ratio-57:60">
+                                                    <img className="absolute-full-center object-fit-cover" src="/img/about-1/about/tree-4.jpg" alt="image"  />
+                                                </div>
+                                                <div className="gallery__button">
+                                                    <Icon.Plus className="icon" />
+                                                </div>
+                                                </Link>
+                                    </div>
+                                </div>
+                                <div className="col-lg-4 col-md-6">
+                                    <div className="ratio ratio-37:40">
+                                    <Link href="img/portfolio/single/4/1.jpg" className="gallery__item js-gallery" data-gallery="gallery1">
+                                    <div className="ratio ratio-57:60">
+                                                    <img className="absolute-full-center object-fit-cover" src="/img/about-1/about/tree-3.webp" alt="image"  />
+                                                </div>
+                                                <div className="gallery__button">
+                                                    <Icon.Plus className="icon" />
+                                                </div>
+                                                </Link>
+                                    </div>
+                                </div>
+                                <div className="col-lg-4 col-md-6">
+                                    <div className="ratio ratio-37:40">
+                                    <Link href="img/portfolio/single/4/1.jpg" className="gallery__item js-gallery" data-gallery="gallery1">
+                                    <div className="ratio ratio-57:60">
+                                                    <img className="absolute-full-center object-fit-cover" src="/img/about-1/about/tree-5.jpg" alt="image"  />
+                                                </div>
+                                                <div className="gallery__button">
+                                                    <Icon.Plus className="icon" />
+                                                </div>
+                                                </Link>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </section>
+
                     <div className="layout-pb-lg">
                         <section>
                             <div className="container">

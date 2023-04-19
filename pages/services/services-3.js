@@ -28,25 +28,6 @@ export default function Services3() {
         <>
             <Layout>
                 <div>
-                    <section className="page-header -base -">
-                        <div className="page-header__bg">
-                            <img className="initial-img" src="/img/page-header/bg-light.png" alt="Page header" />
-                        </div>
-                        <div className="page-header__content">
-                            <div className="row justify-center text-center">
-                                <div className="col-lg-9 col-md-10">
-                                    <div>
-                                        <h1 className="page-header__title lh-14">Our Services</h1>
-                                    </div>
-                                </div>
-                                <div className="col-xl-4 col-lg-9 col-md-10">
-                                    <div className="px-20">
-                                        <p className="page-header__text">With we want to optimize the customization process so your team can save time when building websites.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
                     <section className="layout-pt-lg layout-pb-sm">
                         <div className="container">
                             <div className="row y-gap-48 justify-between items-center">
@@ -57,8 +38,8 @@ export default function Services3() {
                                                 <div className="atropos-inner">
                                                     <div className="image-group -type-2">
                                                         <img data-atropos-offset={-5} src="/img/about-1/about/pattern.png" alt="image" />
-                                                        <img data-atropos-offset={0} className="shadow-card" src="/img/about-5/about/images.png" alt="image" />
-                                                        <img data-atropos-offset={5} className="shadow-card" src="/img/about-5/about/images-1.png" alt="image" />
+                                                        <img data-atropos-offset={0} className="shadow-card" src="/img/about-1/about/tree.jpg" alt="image" />
+                                                        {/* <img data-atropos-offset={5} className="shadow-card" src="/img/about-1/about/soft.png" alt="image" /> */}
                                                     </div>
                                                 </div>
                                             </div>
@@ -68,8 +49,8 @@ export default function Services3() {
                                 <div className="col-xl-4 col-lg-5">
                                     <div className="wow animate__animated animate__fadeIn">
                                         <div className="sectionHeading ">
-                                            <h2 className="sectionHeading__title">IT solutions for your business.</h2>
-                                            <p className="sectionHeading__text mt-20">Praesent sollicitudin felis a ornare volutpat. Nullam malesuada sem sit amet semper tristique. Donec nec neque lectus. Nunc mattis, lectus eu lacinia pre tium, nisl nisi interdum tortor.</p>
+                                            <h2 className="sectionHeading__title">Хэрхэн хөтлөх вэ? </h2>
+                                            <p className="sectionHeading__text mt-20">Ургийн бичиг, удмын түүхээ хөтөлхөд анхаарах зайлшгүй нэг асуудал нь эцэг эх, өвөг дээдсийнхээ удмын мэдээллийг аль болох дэлэгрэнгүйгээр цуглуулж авах явдал юм.</p>
                                         </div>
                                     </div>
                                     <div className="mt-24 y-gap-20">
@@ -77,35 +58,29 @@ export default function Services3() {
                                             <div className="size-32 rounded-full bg-light-3 mr-12 d-flex justify-center items-center">
                                                 <Icon.Check className="icon size-14 text-black" />
                                             </div>
-                                            <h5 className="text-lg fw-600">Installation Guide</h5>
+                                            <h5 className="text-lg fw-600">Маягт ашиглан мэдээллээ цуглуулах хурдан бөгөөд програм хангамжийг ашиглах боломжтой</h5>
                                         </div>
                                         <div className="d-flex items-center">
                                             <div className="size-32 rounded-full bg-light-3 mr-12 d-flex justify-center items-center">
                                                 <Icon.Check className="icon size-14 text-black" />
                                             </div>
-                                            <h5 className="text-lg fw-600">Easy setup process</h5>
+                                            <h5 className="text-lg fw-600">Xялбар аргаар хөтлөх, цаашид баяжуулж дэлгэрүүлэхэд тань ургийн бичгийн програм хангамж туслах болно</h5>
                                         </div>
                                         <div className="d-flex items-center">
                                             <div className="size-32 rounded-full bg-light-3 mr-12 d-flex justify-center items-center">
                                                 <Icon.Check className="icon size-14 text-black" />
                                             </div>
-                                            <h5 className="text-lg fw-600">Live call support</h5>
-                                        </div>
-                                        <div className="d-flex items-center">
-                                            <div className="size-32 rounded-full bg-light-3 mr-12 d-flex justify-center items-center">
-                                                <Icon.Check className="icon size-14 text-black" />
-                                            </div>
-                                            <h5 className="text-lg fw-600">Start a private group video call</h5>
+                                            <h5 className="text-lg fw-600">Төр засгаас хэрэгжүүлж буй бодлого, эрдэмтэн мэргэдийн ярилцлага, нийтлэлүүд</h5>
                                         </div>
                                     </div>
                                     <div className="wow animate__animated animate__fadeIn">
-                                        <Link href="/about/about-5" className="button -md -dark text-white rounded-8 mt-40">Explore</Link>
+                                        <Link href="/register" className="button -md -dark text-white rounded-8 mt-40">Бүргүүлэх</Link>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </section>
-                    <section className="layout-pt-sm layout-pb-sm">
+                    {/* <section className="layout-pt-sm layout-pb-sm">
                         <div className="container">
                             <div className="row justify-between">
                                 <div className="col-xl-4 col-lg-5">
@@ -178,8 +153,8 @@ export default function Services3() {
                                 </div>
                             </div>
                         </div>
-                    </section>
-                    <section className="layout-pt-sm layout-pb-sm">
+                    </section> */}
+                    {/* <section className="layout-pt-sm layout-pb-sm">
                         <div className="container">
                             <div className="row y-gap-16 justify-between items-center">
                                 <div className="col-md-6">
@@ -195,9 +170,9 @@ export default function Services3() {
                                 <ProjectSliderOne />
                             </div>
                         </div>
-                    </section>
+                    </section> */}
                     {/* testimonials */}
-                    <section className="layout-pt-lg layout-pb-sm">
+                    {/* <section className="layout-pt-lg layout-pb-sm">
                         <div className="container">
                             <div className="row y-gap-32 justify-between">
                                 <div className="col-xl-3 col-lg-4">
@@ -217,9 +192,9 @@ export default function Services3() {
                                 </div>
                             </div>
                         </div>
-                    </section>
+                    </section> */}
                     {/* counter */}
-                    <section className="layout-pt-sm layout-pb-sm">
+                    {/* <section className="layout-pt-sm layout-pb-sm">
                         <div className="container">
                             <div className="row y-gap-48">
                                 <div className="col-lg-3 col-6">
@@ -252,8 +227,8 @@ export default function Services3() {
                                 </div>
                             </div>
                         </div>
-                    </section>
-                    <section className="layout-pt-sm layout-pb-lg">
+                    </section> */}
+                    {/* <section className="layout-pt-sm layout-pb-lg">
                         <div className="container">
                             <div className="row justify-center text-center">
                                 <div className="col-auto">
@@ -265,7 +240,7 @@ export default function Services3() {
                                 </div>
                             </div>
                         </div>
-                    </section>
+                    </section> */}
                 </div>
             </Layout>
         </>

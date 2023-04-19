@@ -19,10 +19,10 @@ export default function Header({ navColor, logo, scroll, navToggled, navHandle }
 
                         <div className="col-auto">
                             <div className="header__right">
-                                <div className="md:d-none">
-                                    <Link href="/login" className="button -sm -outline-light-dark sm:d-none">Join</Link>
+                                {/* <div className="md:d-none">
+                                    <Link href="/login" className="button -sm -outline-light-dark sm:d-none"></Link>
                                     <Link href="/contact/contact-1" className="button -sm -dark text-white ml-12">Get the App</Link>
-                                </div>
+                                </div> */}
                                 <div className="header__menu justify-center items-center relative d-none md:d-flex" onClick={navHandle}>
                                     <button type="button" className={`d-flex items-center justify-center js-nav-open ${navToggled ? "pointer-events-none opac-0" : "opac-1"}`} onClick={navHandle}>
                                         <Icon.Menu className="text-black size-32 str-width-1"/>

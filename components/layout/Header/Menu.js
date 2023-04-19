@@ -17,12 +17,12 @@ export default function Menu({ navColor }) {
                             </Link>
                         </li>
                         <li className={`${navColor} menu-item-has-children`}>
-                            <Link href="/#">
+                            <Link href="/services/services-3">
                                 Ургийн бичиг
                             </Link>
                         </li>
                         <li className={`${navColor} menu-item-has-children -has-mega-menu`}>
-                            <Link href="/#">
+                            <Link href="/portfolio/portfolio-single-1">
                                 Ургийн бичгийн төрөл
                             </Link>
                             {/* <div className="mega">

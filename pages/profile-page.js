@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Layout from '@/components/layout/Layout';
-import Link from "next/link";
 import { useRouter} from "next/router";
-import { TrustProductsEvaluationsInstance } from 'twilio/lib/rest/trusthub/v1/trustProducts/trustProductsEvaluations';
+import Link from 'next/link';
+import * as Icon from 'react-feather';
 
 export default function ProfilePage() {
 
@@ -28,7 +28,7 @@ export default function ProfilePage() {
     }
 
     const signOut = () => {
-        sessionStorage.clear();
+        sessionStorage.removeItem("UragiToken");
         router.push('/login');
     }
     return (
@@ -100,26 +100,79 @@ const MyResult = () => (
 const Results = () => (
     <div className="main">
         <h2>Загварууд</h2>
-        <div className="card">
-            <div className="card-body">
-                <i className="fa fa-pen fa-xs edit"></i>
-                <img src="/img/about-1/about/zagvar-1.jpg" alt=""  />
-            </div>
-        </div>
-
-        <div className="card">
-            <div className="card-body">
-                <i className="fa fa-pen fa-xs edit"></i>
-                <img src="/img/about-1/about/zagvar-2.jpeg" width="950px" alt=""  />
-            </div>
-        </div>
-
-        <div className="card">
-            <div className="card-body">
-                <i className="fa fa-pen fa-xs edit"></i>
-                <img src="/img/about-1/about/zagvar-3.png" alt=""  />
-            </div>
-        </div>
+        <section className="layout-pt-sm layout-pb-lg scroll">
+                        <div className="container">
+                            <div className="row y-gap-32">
+                                <div className="col-md-6">
+                                    {/* <img className="initial-img" src="/img/portfolio/single/3/1.jpg" alt="image"  /> */}
+                                    <Link href="/services/services-2" className="gallery__item js-gallery" data-gallery="gallery1">
+                                    <div className="ratio ratio-57:60">
+                                                    <img className="absolute-full-center object-fit-cover" src="/img/about-1/about/tree-1.jpg" alt="image"  />
+                                                </div>
+                                                <div className="gallery__button">
+                                                    <Icon.Plus className="icon" />
+                                                </div>
+                                                </Link>
+                                </div>
+                                <div className="col-md-6">
+                                <Link href="/services/services-2" className="gallery__item js-gallery" data-gallery="gallery1">
+                                    <div className="ratio ratio-57:60">
+                                                    <img className="absolute-full-center object-fit-cover" src="/img/about-1/about/tree-2.jpg" alt="image"  />
+                                                </div>
+                                                <div className="gallery__button">
+                                                    <Icon.Plus className="icon" />
+                                                </div>
+                                                </Link>
+                                </div>
+                                {/* <div className="col-12">
+                                <a href="img/portfolio/single/4/1.jpg" className="gallery__item js-gallery" data-gallery="gallery1">
+                                    <div className="ratio ratio-57:60">
+                                                    <img className="absolute-full-center object-fit-cover" src="/img/about-1/about/tree-3.webp" alt="image"  />
+                                                </div>
+                                                <div className="gallery__button">
+                                                    <Icon.Plus className="icon" />
+                                                </div>
+                                                </a>
+                                </div> */}
+                                <div className="col-lg-4 col-md-6">
+                                    <div className="ratio ratio-37:40">
+                                    <Link href="img/portfolio/single/4/1.jpg" className="gallery__item js-gallery" data-gallery="gallery1">
+                                    <div className="ratio ratio-57:60">
+                                                    <img className="absolute-full-center object-fit-cover" src="/img/about-1/about/tree-4.jpg" alt="image"  />
+                                                </div>
+                                                <div className="gallery__button">
+                                                    <Icon.Plus className="icon" />
+                                                </div>
+                                                </Link>
+                                    </div>
+                                </div>
+                                <div className="col-lg-4 col-md-6">
+                                    <div className="ratio ratio-37:40">
+                                    <Link href="img/portfolio/single/4/1.jpg" className="gallery__item js-gallery" data-gallery="gallery1">
+                                    <div className="ratio ratio-57:60">
+                                                    <img className="absolute-full-center object-fit-cover" src="/img/about-1/about/tree-3.webp" alt="image"  />
+                                                </div>
+                                                <div className="gallery__button">
+                                                    <Icon.Plus className="icon" />
+                                                </div>
+                                                </Link>
+                                    </div>
+                                </div>
+                                <div className="col-lg-4 col-md-6">
+                                    <div className="ratio ratio-37:40">
+                                    <Link href="img/portfolio/single/4/1.jpg" className="gallery__item js-gallery" data-gallery="gallery1">
+                                    <div className="ratio ratio-57:60">
+                                                    <img className="absolute-full-center object-fit-cover" src="/img/about-1/about/tree-5.jpg" alt="image"  />
+                                                </div>
+                                                <div className="gallery__button">
+                                                    <Icon.Plus className="icon" />
+                                                </div>
+                                                </Link>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
 
         {/* <h2>SOCIAL MEDIA</h2>
         <div className="card">

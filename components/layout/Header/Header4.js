@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import Link from 'next/link';
 import * as Icon from 'react-feather';
 import Logo from './Logo';
@@ -9,7 +9,7 @@ export default function Header4({ navColor, logo, scroll, navToggled, navHandle 
     //let token = sessionStorage.getItem('UragiToken');
     let loginLink = <Link href="/profile-page" className="button -sm -green text-white">Профайл</Link>;
     
-    useEffect(() => {
+    useRef(() => {
         let token = sessionStorage.getItem('UragiToken');
         
     
