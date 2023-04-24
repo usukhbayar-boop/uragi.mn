@@ -16,11 +16,11 @@ export default function Footer6() {
                                     <div className="y-gap-32 pt-30">
                                         <div>
                                             <div className="text-lg opac-50">Холбоо барих</div>
-                                            <div className="text-xl fw-600">+(1) 123 456 7890</div>
+                                            <div className="text-xl fw-600">+(976) 99092131</div>
                                         </div>
                                         <div>
                                             <div className="text-lg opac-50">Санал хүсэлтээ илгээх</div>
-                                            <div className="text-xl fw-600">hi@sassio.com</div>
+                                            <div className="text-xl fw-600">baavlag512@gmail.com</div>
                                         </div>
                                     </div>
                                 </div>
@@ -44,6 +44,7 @@ export default function Footer6() {
                                     </div>
                                 </div>
                             </div>
+
                             {/* <div className="col-lg-3 col-sm-6">
                                 <div className="footer__item">
                                     <h3 className="footer__title text-xl lh-1 fw-600">Legal</h3>
@@ -66,6 +67,8 @@ export default function Footer6() {
                                     </div>
                                 </div>
                             </div> */}
+
+
                             <div className="col-lg-3 col-sm-6">
                                 <div className="y-gap-48">
                                     <div className="footer__socials">

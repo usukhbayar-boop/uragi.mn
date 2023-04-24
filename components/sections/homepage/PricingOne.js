@@ -112,7 +112,7 @@ export default function PricingOne() {
                                     <div className="d-flex justify-center mt-40">
                                         <Link
 
-                                            href="pricing"
+                                            href="/portfolio/portfolio-list-1"
                                             className="button -md -accent text-white -uppercase"
                                         >
                                             Худалдан авах

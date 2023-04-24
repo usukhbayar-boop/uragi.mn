@@ -3,7 +3,7 @@ import Link from 'next/link';
 export default function Footer3() {
     return (
         <>
-            <div className="svg-shape">
+            {/* <div className="svg-shape">
                 <svg
                     width={1920}
                     height={290}
@@ -13,10 +13,10 @@ export default function Footer3() {
                 >
                     <path d="M0 240L1920 0V290H0V240Z" fill="#F7F9FC" />
                 </svg>
-            </div>
+            </div> */}
 
             <footer className="footer -type-4 pt-40 bg-light-5">
-                <div className="footer__top">
+                {/* <div className="footer__top">
                     <div className="container">
                         <div className="row y-gap-48 justify-content-between">
                             <div className="col-lg-3 col-5">
@@ -213,7 +213,7 @@ export default function Footer3() {
                         </div>
                         <div className="row justify-between items-center py-30 border-top-dark mt-80">
                             <div className="col-auto">
-                                <div className="footer__bottom_text">© Copyright 2023. Sassio - NextJS template by AliThemes</div>
+                                <div className="footer__bottom_text">© Copyright 2023</div>
                             </div>
                             <div className="col-auto">
                                 <div className="socials">
@@ -241,7 +241,7 @@ export default function Footer3() {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </footer>
         </>
     )

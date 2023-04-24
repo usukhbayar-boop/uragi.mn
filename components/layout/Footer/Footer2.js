@@ -191,7 +191,7 @@ export default function Footer2() {
                         <div className="row justify-center py-30 border-top-light mt-120 md:mt-60">
                             <div className="col-auto">
                                 <div className="footer__bottom_text text-white">
-                                    © Copyright 2023. Sassio - NextJS template by AliThemes
+                                    © Copyright 2023
                                 </div>
                             </div>
                         </div>

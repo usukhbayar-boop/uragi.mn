@@ -22,7 +22,7 @@ export default function Menu({ navColor }) {
                             </Link>
                         </li>
                         <li className={`${navColor} menu-item-has-children -has-mega-menu`}>
-                            <Link href="/portfolio/portfolio-single-1">
+                            <Link href="/portfolio/portfolio-list-1">
                                 Ургийн бичгийн төрөл
                             </Link>
                             {/* <div className="mega">

@@ -3,7 +3,7 @@ import Link from "next/link";
 import * as Icon from 'react-feather';
 import { useCallback, useEffect, useRef, useState } from "react";
 
-export default function PortfolioFilterOne() {
+export default function PortfolioFilterSpecial() {
     const isotope = useRef();
     const [filterKey, setFilterKey] = useState("*");
     useEffect(() => {
@@ -53,7 +53,7 @@ export default function PortfolioFilterOne() {
             </div>
             <div className="works-row masonry -col-3 -gap-32 pt-60 md:pt-40 js-masonry js-masonry-no-filter">
                 <div className="masonry__sizer"></div>
-                <div className="masonry__item -no-ratio  e_commerce">
+                {/* <div className="masonry__item -no-ratio  e_commerce">
                     <div className="h:zoom">
                         <div className="relative hover-group overflow-hidden rounded-8">
                             <div className="ratio ratio-37:40 bg-image h:zoom__item rounded-8 js-lazy" style={{ backgroundImage: 'url("../img/about-1/about/uragi-1.png")' }} />
@@ -63,46 +63,23 @@ export default function PortfolioFilterOne() {
                                     Худалдан авах
                                     <Icon.ArrowRight className="icon ml-12" />
                                 </div>
-                                <Link data-barba href="/templates/116" className="absolute-full-center z-3" />
+                                <Link data-barba href="/portfolio/portfolio-single-1" className="absolute-full-center z-3" />
                             </div>
                         </div>
                         <div className="mt-20">
                             <div className="x-gap-10 y-gap-10">
                                 <a data-barba href="#" className="decoration-none text-sm">#угийнмод</a>
-                                {/* <a data-barba href="#" className="decoration-none text-sm">#design</a>
-                                <a data-barba href="#" className="decoration-none text-sm">#developer</a> */}
+                                <a data-barba href="#" className="decoration-none text-sm">#design</a>
+                                <a data-barba href="#" className="decoration-none text-sm">#developer</a>
                             </div>
                             <h4 className="text-2xl fw-600 mt-16">Шаталсан</h4>
                         </div>
                     </div>
-                </div>
+                </div> */}
                 <div className="masonry__item -no-ratio  e_commerce digital_design">
                     <div className="h:zoom">
                         <div className="relative hover-group overflow-hidden rounded-8">
-                            <div className="ratio ratio-37:40 bg-image h:zoom__item rounded-8 js-lazy" style={{ backgroundImage: 'url("../img/about-1/about/uragi-2.png")' }} />
-                            <div className="text-white absolute-full-center z-2 | opac-0 hg:opacity-100 t-base">
-                                <div className="bg-dark-2 opac-60 rounded-8 absolute-full-center z-1" />
-                                <div className="d-flex justify-center items-center text-xl fw-600 absolute-full-center z-2">
-                                    Худалдан авах
-                                    <Icon.ArrowRight className="icon ml-12" />
-                                </div>
-                                <Link data-barba href="/templates/117" className="absolute-full-center z-3" />
-                            </div>
-                        </div>
-                        <div className="mt-20">
-                            <div className="x-gap-10 y-gap-10">
-                                <a data-barba href="#" className="decoration-none text-sm">#угийнмод</a>
-                                {/* <a data-barba href="#" className="decoration-none text-sm">#design</a>
-                                <a data-barba href="#" className="decoration-none text-sm">#developer</a> */}
-                            </div>
-                            <h4 className="text-2xl fw-600 mt-16">Star Wars</h4>
-                        </div>
-                    </div>
-                </div>
-                <div className="masonry__item -no-ratio  web_design digital_design branding">
-                    <div className="h:zoom">
-                        <div className="relative hover-group overflow-hidden rounded-8">
-                            <div className="ratio ratio-37:40 bg-image h:zoom__item rounded-8 js-lazy" style={{ backgroundImage: 'url("../img/about-1/about/uragi-3.png")' }} />
+                            <div className="ratio ratio-37:40 bg-image h:zoom__item rounded-8 js-lazy" style={{ backgroundImage: 'url("../img/about-1/about/tree-example.jpg")' }} />
                             <div className="text-white absolute-full-center z-2 | opac-0 hg:opacity-100 t-base">
                                 <div className="bg-dark-2 opac-60 rounded-8 absolute-full-center z-1" />
                                 <div className="d-flex justify-center items-center text-xl fw-600 absolute-full-center z-2">
@@ -118,10 +95,33 @@ export default function PortfolioFilterOne() {
                                 {/* <a data-barba href="#" className="decoration-none text-sm">#design</a>
                                 <a data-barba href="#" className="decoration-none text-sm">#developer</a> */}
                             </div>
-                            <h4 className="text-2xl fw-600 mt-16">Мод</h4>
+                            <h4 className="text-2xl fw-600 mt-16">Star Wars</h4>
                         </div>
                     </div>
                 </div>
+                {/* <div className="masonry__item -no-ratio  web_design digital_design branding">
+                    <div className="h:zoom">
+                        <div className="relative hover-group overflow-hidden rounded-8">
+                            <div className="ratio ratio-37:40 bg-image h:zoom__item rounded-8 js-lazy" style={{ backgroundImage: 'url("../img/about-1/about/uragi-1.png")' }} />
+                            <div className="text-white absolute-full-center z-2 | opac-0 hg:opacity-100 t-base">
+                                <div className="bg-dark-2 opac-60 rounded-8 absolute-full-center z-1" />
+                                <div className="d-flex justify-center items-center text-xl fw-600 absolute-full-center z-2">
+                                    Худалдан авах
+                                    <Icon.ArrowRight className="icon ml-12" />
+                                </div>
+                                <Link data-barba href="/portfolio/portfolio-single-1" className="absolute-full-center z-3" />
+                            </div>
+                        </div>
+                        <div className="mt-20">
+                            <div className="x-gap-10 y-gap-10">
+                                <a data-barba href="#" className="decoration-none text-sm">#угийнмод</a>
+                                <a data-barba href="#" className="decoration-none text-sm">#design</a>
+                                <a data-barba href="#" className="decoration-none text-sm">#developer</a>
+                            </div>
+                            <h4 className="text-2xl fw-600 mt-16">Мод</h4>
+                        </div>
+                    </div>
+                </div> */}
                 {/* <div className="masonry__item -no-ratio  e_commerce branding">
                     <div className="h:zoom">
                         <div className="relative hover-group overflow-hidden rounded-8">

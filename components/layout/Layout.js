@@ -4,7 +4,7 @@ import Footer1 from './Footer/Footer1'
 import Footer10 from './Footer/Footer10'
 import Footer11 from './Footer/Footer11'
 import Footer2 from './Footer/Footer2'
-import Footer3 from './Footer/Footer3'
+// import Footer3 from './Footer/Footer3'
 import Footer4 from './Footer/Footer4'
 import Footer5 from './Footer/Footer5'
 import Footer6 from './Footer/Footer6'
@@ -68,7 +68,7 @@ export default function Layout({ headerLayout=1, footerLayout, children, bgColor
                     {!footerLayout && < Footer6 />}
                     {footerLayout == 1 ? < Footer1 /> : null}
                     {footerLayout == 2 ? < Footer2 /> : null}
-                    {footerLayout == 3 ? < Footer3 /> : null}
+                    {/* {footerLayout == 3 ? < Footer3 /> : null} */}
                     {footerLayout == 4 ? < Footer4 /> : null}
                     {footerLayout == 5 ? < Footer5 /> : null}
                     {footerLayout == 6 ? < Footer6 /> : null}

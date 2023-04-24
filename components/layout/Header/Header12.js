@@ -1,41 +1,23 @@
-import Link from "next/link";
-import Logo from "./Logo";
-import Menu from "./Menu";
+
+import Logo from './Logo';
 import MenuMobile from './MenuMobile';
-import {signOut} from "firebase/auth";
-import {useAuthState} from "react-firebase-hooks/auth";
-import { getAuth, signInWithEmailAndPassword} from "firebase/auth";
-import { useRouter} from "next/router";
-
 import * as Icon from 'react-feather';
-export default function Header3({ navColor, logo, scroll, navToggled, navHandle }) {
-    const auth = getAuth();
-    const [user, loading, error] = useAuthState(auth);
-    const router = useRouter();
+import Link from 'next/link';
 
-    const logOut = () => {
-        signOut(auth);
-        router.push("/")
-    }
+export default function Header12({ navColor, logo, scroll, navToggled, navHandle }) {
     return (
         <>
-            {/* <header className="header -type-2 -sticky-dark js-header"> */}
-            <header className={`header -type-2 -sticky-dark js-header ${scroll ? "is-sticky" : ""}`}>
+            <header className={`header js-header ${scroll ? "is-sticky" : ""} ${navToggled ? "menu-open" : ""}`}>
                 <div className="header__bar js-header-bar">
                     <div className="row justify-between items-center">
-                        <div className="col-auto">
-                            <div className="d-flex">
-                                <Logo logo={logo} />
-                                <div className="ml-64">
-                                    <Menu navColor={navColor} />
-                                </div>
-                            </div>
+                        <div className="col-2">
+                            {/* <Logo logo={logo} /> */}
                         </div>
                         <MenuMobile navToggled={navToggled} />
                         <div className="col-auto">
                             <div className="header__right">
                                 <div className="md:d-none">
-                                    <div onClick={() => logOut(auth)} className="button -sm -light-4 text-dark-1">Гарах</div>
+                                    <Link href="/profile-page" className="button -sm -dark text-white ml-12">Хадгалаад буцаx</Link>
                                 </div>
                                 <div className="header__menu justify-center items-center relative d-none md:d-flex" onClick={navHandle}>
                                     <button type="button" className={`d-flex items-center justify-center js-nav-open ${navToggled ? "pointer-events-none opac-0" : "opac-1"}`} onClick={navHandle}>
@@ -43,7 +25,7 @@ export default function Header3({ navColor, logo, scroll, navToggled, navHandle 
                                     </button>
                                     <button type="button"
                                         className={`d-flex items-center justify-center absolute-y-center right-0  js-nav-close ${navToggled ? "pointer-events-none opac-1" : "opac-0"}`}>
-                                        Close
+                                        Хаах
                                         <Icon.X className="text-black size-32 str-width-1 ml-4"/>
                                     </button>
                                 </div>
@@ -52,7 +34,6 @@ export default function Header3({ navColor, logo, scroll, navToggled, navHandle 
                     </div>
                 </div>
             </header>
-
         </>
     )
 }

@@ -3,7 +3,7 @@ import Layout from '@/components/layout/Layout';
 import Link from 'next/link';
 import * as Icon from 'react-feather'; 
 import {app, database} from "../firebaseConfig";
-import {collection, addDoc, getDocs, doc, updateDoc, deleteDoc} from "firebase/firestore";
+// import {collection, addDoc, getDocs, doc, updateDoc, deleteDoc} from "firebase/firestore";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { useRouter} from "next/router";
 
@@ -18,7 +18,7 @@ export default function Login() {
     const errorScript1 = "Бүртгэлгүй хэрэглэгч байна!!!";
     const errorScript2 = "Нууц үг буруу байна!";
 
-    const collectionRef = collection(database, "users")
+    // const collectionRef = collection(database, "users")
 
     const getData = (event) => {
         event.preventDefault();
@@ -77,20 +77,20 @@ export default function Login() {
         
     }
 
-    const updateData = (event) => {
-        event.preventDefault()
-        const docToUpdate = doc(database, "users", "x9LxokdgrsG3ldJOfXAt");
-        updateDoc(docToUpdate, {
-            phone: "99125262",
-            password: "94948106"
-        })
-        .then(() => {
-            alert("Data Updated")
-        })
-        .catch((err) => {
-            alert(err.message);
-        })
-    }
+    // const updateData = (event) => {
+    //     event.preventDefault()
+    //     const docToUpdate = doc(database, "users", "x9LxokdgrsG3ldJOfXAt");
+    //     updateDoc(docToUpdate, {
+    //         phone: "99125262",
+    //         password: "94948106"
+    //     })
+    //     .then(() => {
+    //         alert("Data Updated")
+    //     })
+    //     .catch((err) => {
+    //         alert(err.message);
+    //     })
+    // }
 
     // const handleSubmit = async (event) => {
     //     // Stop the form from submitting and refreshing the page.
@@ -183,7 +183,7 @@ export default function Login() {
                                                 </div>
                                             </div>
                                             <div className="col-auto">
-                                                <a className="decoration-none text-accent" href="#">Нууц үгээ мартсан уу?</a>
+                                                {/* <a className="decoration-none text-accent" href="#">Нууц үгээ мартсан уу?</a> */}
                                             </div>
                                         </div>
                                     </div>

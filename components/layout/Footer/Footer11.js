@@ -3,7 +3,7 @@ import Link from 'next/link'
 export default function Footer11() {
     return (
         <>
-            <footer className="footer -type-3 bg-dark-1">
+            {/* <footer className="footer -type-3 bg-dark-1">
                 <div className="footer__top">
                     <div className="container">
                         <div className="row y-gap-48 justify-content-between">
@@ -195,7 +195,7 @@ export default function Footer11() {
                         </div>
                     </div>
                 </div>
-            </footer>
+            </footer> */}
         </>
     )
 }

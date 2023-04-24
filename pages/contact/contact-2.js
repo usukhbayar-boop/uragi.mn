@@ -98,7 +98,7 @@ export default function Contact2() {
                     </section>
                     <section className="layout-pt-lg layout-pb-lg relative">
                         <div id="map" className="map absolute-full-center z-1">
-                            <LeafletMap center={[51.505, -0.09]} zoom={13} />
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10276.193942568781!2d106.88774113929868!3d47.913879386624785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5d9692f8d5aef349%3A0x719fcb0e2931a298!2sGrand%20Plaza!5e0!3m2!1smn!2smn!4v1682046376972!5m2!1smn!2smn" width="1200" height="700" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                         <div className="relative z-5">
                             <div className="container">
@@ -113,7 +113,7 @@ export default function Contact2() {
                                                     <div className="mr-16">
                                                         <img src="/img/contact/2/pin.svg" alt="icon" />
                                                     </div>
-                                                    <p>328 Queensberry Street, North Melbourne VIC 3051, Australia.</p>
+                                                    <p>Монгол улс, Улаанбаатар хот</p>
                                                 </div>
                                                 <div className="d-flex">
                                                     <div className="mr-16">
@@ -125,7 +125,7 @@ export default function Contact2() {
                                                     <div className="mr-16">
                                                         <img src="/img/contact/2/call.svg" alt="icon" />
                                                     </div>
-                                                    <p>hi@sassio.com</p>
+                                                    <p>hi@gmail.com</p>
                                                 </div>
                                             </div>
                                             <button className="button -md -accent -uppercase text-white mt-32">Google Maps-аас үзэх</button>

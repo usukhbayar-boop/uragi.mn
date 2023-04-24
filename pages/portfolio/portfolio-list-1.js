@@ -17,13 +17,13 @@ export default function Portfolio1() {
                                 <div className="row justify-center text-center">
                                     <div className="col-xl-6 col-lg-9 col-md-10">
                                         <div>
-                                            <h1 className="page-header__title lh-14">Portfolio Showcase</h1>
+                                            <h1 className="page-header__title lh-14">Ургийн бичгийн загварууд</h1>
                                         </div>
                                     </div>
                                     <div className="w-1/1" />
                                     <div className="col-xl-5 col-lg-9 col-md-10">
                                         <div className="px-20">
-                                            <p className="page-header__text">With we want to optimize the customization process so your team can save time when building websites.</p>
+                                            <p className="page-header__text">Дараах загваруудаас та худалдан аваад, хүссэнээрээ өөрчлөн ашиглаж, хадгалаж, татаж авах боломжтой.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -41,11 +41,11 @@ export default function Portfolio1() {
                         <div className="container">
                             <div className="row justify-center text-center">
                                 <div className="col-auto">
-                                    <div className="sectionHeading ">
+                                    {/* <div className="sectionHeading ">
                                         <h2 className="sectionHeading__title">We help startups launch and succeed very fast</h2>
                                         <p className="sectionHeading__text mt-20">We appreciate your trust greatly! Our clients choose us and our products<br className="md:d-none" /> because they know we are the best.</p>
-                                    </div>
-                                    <Link href="/contact/contact-2" className="button -md -accent text-white mt-40 md:mt-30">Get Started</Link>
+                                    </div> */}
+                                    <Link href="/register" className="button -md -accent text-white mt-40 md:mt-30">Бүртгүүлэх</Link>
                                 </div>
                             </div>
                         </div>

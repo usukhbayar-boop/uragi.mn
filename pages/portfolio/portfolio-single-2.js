@@ -6,7 +6,7 @@ import * as Icon from 'react-feather';
 export default function PortfolioSingle2() {
     return (
         <>
-            <Layout footerLayout={11}>
+            <Layout footerLayout={1}>
                 <div>
                     <section className="page-header -text -">
                         <div className="container">
@@ -14,13 +14,24 @@ export default function PortfolioSingle2() {
                                 <div className="row justify-between">
                                     <div className="col-xl-6 col-lg-7 col-md-10">
                                         <div>
-                                            <h1 className="page-header__title lh-14">Lifestars Bags</h1>
+                                            <h1 className="page-header__title lh-14">Ургийн бичгийн төрлүүд</h1>
                                         </div>
                                         <div className="mt-4">
-                                            <p className="page-header__text">Dicta sunt explicabo. Nemo ipsam voluptatem quia voluptas aspernatur aut odit aut fugit, sed quia. Dicta sunt explicabo. Nemo enim ipsam voluptas aspernatur aut odit.</p>
+                                            <p className="page-header__text">Хэрэв та ургийн бичигээ онлайн орчинд дараах дараах загваруудын дагуу хөтлөхийг хүсвэл бүртгүүлээд, профайл хэсэг рүүгээ орно уу.</p>
                                         </div>
                                     </div>
-                                    <div className="col-xl-4 col-lg-5 col-md-10">
+                                    <div className="masthead__buttons row y-gap-10 pt-32 md:pt-20">
+                                    <div className="col-auto text-white wow animate__animated animate__fadeInUp">
+                                        <Link href="/register" className="button -store bg-dark-2 text-white">
+                                            <div className="button__content">
+                                                <div>Бүртгүүлэх</div>
+                                            </div>
+                                        </Link>
+                                    </div>
+                                </div>
+
+                                
+                                    {/* <div className="col-xl-4 col-lg-5 col-md-10">
                                         <div className="row x-gap-32 y-gap-40">
                                             <div className="col-6">
                                                 <h5 className="text-xl fw-600">Client</h5>
@@ -50,17 +61,24 @@ export default function PortfolioSingle2() {
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> */}
                                 </div>
+
+                                
                             </div>
+                            
                         </div>
+                       
                     </section>
+                    <div className="ratio ratio-97:55">
+                            <img className="absolute-full-center object-fit-cover rounded-8" src={`../img/about-1/about/uragi-1.png`} alt="Image" />
+                              </div>
                     <section className="layout-pt-md layout-pb-sm">
                         <div className="container-fluid">
                             <PortfolioSliderTwo />
                         </div>
                     </section>
-                    <section className="layout-pt-sm layout-pb-sm">
+                    {/* <section className="layout-pt-sm layout-pb-sm">
                         <div className="container">
                             <div className="row y-gap-64">
                                 <div className="col-12">
@@ -105,8 +123,8 @@ export default function PortfolioSingle2() {
                                 </div>
                             </div>
                         </div>
-                    </section>
-                    <section className="layout-pt-sm layout-pb-lg">
+                    </section> */}
+                    {/* <section className="layout-pt-sm layout-pb-lg">
                         <div className="container">
                             <div className="row y-gap-32">
                                 <div className="col-12">
@@ -120,8 +138,8 @@ export default function PortfolioSingle2() {
                                 </div>
                             </div>
                         </div>
-                    </section>
-                    <div className="layout-pb-lg">
+                    </section> */}
+                    {/* <div className="layout-pb-lg">
                         <section>
                             <div className="container">
                                 <div className="related-nav py-30">
@@ -183,7 +201,7 @@ export default function PortfolioSingle2() {
                                 </div>
                             </div>
                         </section>
-                    </div>
+                    </div> */}
                     <div className="svg-shape">
                         <svg width={1920} height={60} viewBox="0 0 1920 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M0 30C0 13.4315 13.4315 0 30 0H1890C1906.57 0 1920 13.4315 1920 30V60H0V30Z" fill="#1A3454" />

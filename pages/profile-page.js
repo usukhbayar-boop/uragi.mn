@@ -3,13 +3,22 @@ import Layout from '@/components/layout/Layout';
 import { useRouter} from "next/router";
 import Link from 'next/link';
 import * as Icon from 'react-feather';
+import {signOut} from "firebase/auth";
+import {useAuthState} from "react-firebase-hooks/auth";
+import { getAuth, signInWithEmailAndPassword} from "firebase/auth";
+import dynamic from 'next/dynamic';
+
+const PortfolioFilterSpecial = dynamic(() => import('@/components/portfolio/PortfoliaFilterSpecial'), {
+    ssr: false,
+})
 
 export default function ProfilePage() {
 
+    // const auth = getAuth();
+    // const [user, loading, error] = useAuthState(auth);
     const router = useRouter();
     const [isActiveFirst, setIsActiveFirst] = useState(true);
     const [isActiveSecond, setIsActiveSecond] = useState(false);
-    const [isActiveThird, setIsActiveThird] = useState(false);
     const [showMyResults, setShowMyResults] = useState(true);
 
     const onClickMain = () => {
@@ -21,16 +30,13 @@ export default function ProfilePage() {
 
     const [showResults, setShowResults] = useState(false)
     const onClick = () => {
-        setShowMyResults(false)
-        setShowResults(true)
-        setIsActiveFirst(false)
-        setIsActiveSecond(current => !current);
+        router.push("/portfolio/portfolio-list-1");
     }
 
-    const signOut = () => {
-        sessionStorage.removeItem("UragiToken");
-        router.push('/login');
-    }
+    // const signOut = () => {
+    //     sessionStorage.removeItem("UragiToken");
+    //     router.push('/login');
+    // }
     return (
         <>
         <Layout
@@ -71,10 +77,10 @@ export default function ProfilePage() {
                 <a href="">Тохиргоо</a>
                 <hr align="center"/>
             </div>
-            <div className="url" onClick={signOut}>
+            {/* <div className="url" onClick={() => signOut(auth)}>
               Гарах
                 <hr align="center"/>
-            </div>
+            </div> */}
         </div>
 
         
@@ -98,117 +104,7 @@ const MyResult = () => (
 
 
 const Results = () => (
-    <div className="main">
-        <h2>Загварууд</h2>
-        <section className="layout-pt-sm layout-pb-lg scroll">
-                        <div className="container">
-                            <div className="row y-gap-32">
-                                <div className="col-md-6">
-                                    {/* <img className="initial-img" src="/img/portfolio/single/3/1.jpg" alt="image"  /> */}
-                                    <Link href="/services/services-2" className="gallery__item js-gallery" data-gallery="gallery1">
-                                    <div className="ratio ratio-57:60">
-                                                    <img className="absolute-full-center object-fit-cover" src="/img/about-1/about/tree-1.jpg" alt="image"  />
-                                                </div>
-                                                <div className="gallery__button">
-                                                    <Icon.Plus className="icon" />
-                                                </div>
-                                                </Link>
-                                </div>
-                                <div className="col-md-6">
-                                <Link href="/services/services-2" className="gallery__item js-gallery" data-gallery="gallery1">
-                                    <div className="ratio ratio-57:60">
-                                                    <img className="absolute-full-center object-fit-cover" src="/img/about-1/about/tree-2.jpg" alt="image"  />
-                                                </div>
-                                                <div className="gallery__button">
-                                                    <Icon.Plus className="icon" />
-                                                </div>
-                                                </Link>
-                                </div>
-                                {/* <div className="col-12">
-                                <a href="img/portfolio/single/4/1.jpg" className="gallery__item js-gallery" data-gallery="gallery1">
-                                    <div className="ratio ratio-57:60">
-                                                    <img className="absolute-full-center object-fit-cover" src="/img/about-1/about/tree-3.webp" alt="image"  />
-                                                </div>
-                                                <div className="gallery__button">
-                                                    <Icon.Plus className="icon" />
-                                                </div>
-                                                </a>
-                                </div> */}
-                                <div className="col-lg-4 col-md-6">
-                                    <div className="ratio ratio-37:40">
-                                    <Link href="img/portfolio/single/4/1.jpg" className="gallery__item js-gallery" data-gallery="gallery1">
-                                    <div className="ratio ratio-57:60">
-                                                    <img className="absolute-full-center object-fit-cover" src="/img/about-1/about/tree-4.jpg" alt="image"  />
-                                                </div>
-                                                <div className="gallery__button">
-                                                    <Icon.Plus className="icon" />
-                                                </div>
-                                                </Link>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4 col-md-6">
-                                    <div className="ratio ratio-37:40">
-                                    <Link href="img/portfolio/single/4/1.jpg" className="gallery__item js-gallery" data-gallery="gallery1">
-                                    <div className="ratio ratio-57:60">
-                                                    <img className="absolute-full-center object-fit-cover" src="/img/about-1/about/tree-3.webp" alt="image"  />
-                                                </div>
-                                                <div className="gallery__button">
-                                                    <Icon.Plus className="icon" />
-                                                </div>
-                                                </Link>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4 col-md-6">
-                                    <div className="ratio ratio-37:40">
-                                    <Link href="img/portfolio/single/4/1.jpg" className="gallery__item js-gallery" data-gallery="gallery1">
-                                    <div className="ratio ratio-57:60">
-                                                    <img className="absolute-full-center object-fit-cover" src="/img/about-1/about/tree-5.jpg" alt="image"  />
-                                                </div>
-                                                <div className="gallery__button">
-                                                    <Icon.Plus className="icon" />
-                                                </div>
-                                                </Link>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-        {/* <h2>SOCIAL MEDIA</h2>
-        <div className="card">
-            <div className="card-body">
-                <i className="fa fa-pen fa-xs edit"></i>
-                <div className="social-media">
-                    <span className="fa-stack fa-sm">
-                        <i className="fas fa-circle fa-stack-2x"></i>
-                        <i className="fab fa-facebook fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <span className="fa-stack fa-sm">
-                        <i className="fas fa-circle fa-stack-2x"></i>
-                        <i className="fab fa-twitter fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <span className="fa-stack fa-sm">
-                        <i className="fas fa-circle fa-stack-2x"></i>
-                        <i className="fab fa-instagram fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <span className="fa-stack fa-sm">
-                        <i className="fas fa-circle fa-stack-2x"></i>
-                        <i className="fab fa-invision fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <span className="fa-stack fa-sm">
-                        <i className="fas fa-circle fa-stack-2x"></i>
-                        <i className="fab fa-github fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <span className="fa-stack fa-sm">
-                        <i className="fas fa-circle fa-stack-2x"></i>
-                        <i className="fab fa-whatsapp fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <span className="fa-stack fa-sm">
-                        <i className="fas fa-circle fa-stack-2x"></i>
-                        <i className="fab fa-snapchat fa-stack-1x fa-inverse"></i>
-                    </span>
-                </div>
-            </div>
-        </div> */}
-    </div>  
+    <>
+     
+    </>
   )

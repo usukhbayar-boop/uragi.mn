@@ -6,12 +6,9 @@ SwiperCore.use([Autoplay, Navigation, Pagination]);
 
 export default function PortfolioSliderTwo() {
     const data = [
-        { img: "slider-1" },
-        { img: "slider-2" },
-        { img: "slider-3" },
-        { img: "slider-1" },
-        { img: "slider-2" },
-        { img: "slider-3" },
+        { img: "uragi-1" },
+        { img: "uragi-2" },
+        { img: "uragi-3" }
     ];
 
     return (
@@ -60,7 +57,7 @@ export default function PortfolioSliderTwo() {
                 {data.map((item, i) => (
                     <SwiperSlide className="swiper-slide" key={i}>
                         <div className="ratio ratio-97:55">
-                            <img className="absolute-full-center object-fit-cover rounded-8" src={`../img/portfolio/single/2/${item.img}.jpg`} alt="Image" />
+                            <img className="absolute-full-center object-fit-cover rounded-8" src={`../img/about-1/about/${item.img}.png`} alt="Image" />
                         </div>
                     </SwiperSlide>
                 ))}

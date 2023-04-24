@@ -13,7 +13,7 @@ export default function Footer() {
                             </div>
                         </div>
                         <div className="footer__center">
-                            <span className="footer__copyright">© Copyright 2023. Sassio - NextJS template by AliThemes</span>
+                            <span className="footer__copyright">© Copyright 2023</span>
                         </div>
                         <div className="col-md-auto">
                             <div className="footer__right">

@@ -16,12 +16,12 @@ export default function PortfolioSingle1() {
                                             <h1 className="page-header__title lh-14">Ургийн бичгийн загварууд</h1>
                                         </div>
                                     </div>
-                                    <div className="w-1/1" />
+                                    {/* <div className="w-1/1" />
                                     <div className="col-xl-5 col-lg-9 col-md-10">
-                                        {/* <div className="px-20">
+                                        <div className="px-20">
                                             <p className="page-header__text">Dicta sunt explicabo. Nemo ipsam voluptatem quia voluptas aspernatur aut odit aut fugit, sed quia. Dicta sunt explicabo. Nemo enim ipsam voluptas aspernatur aut odit.</p>
-                                        </div> */}
-                                    </div>
+                                        </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>
@@ -66,9 +66,9 @@ export default function PortfolioSingle1() {
                             </div>
                         </div>
                     </section> */}
-                    <section>
-                        <div className="bg-image js-lazy pt-100 pb-100 mh-700 bg-fixed" style={{ backgroundImage: 'url("/img/about-1/about/gene.jpg")' }} />
-                    </section>
+                        <section>
+                            <div className="bg-image js-lazy pt-100 pb-100 mh-700 bg-fixed" style={{ backgroundImage: 'url("/img/about-1/about/gene.jpg")' }} />
+                        </section>
                     {/* <section className="layout-pt-lg layout-pb-sm">
                         <div className="container">
                             <div className="row justify-center">
@@ -103,11 +103,11 @@ export default function PortfolioSingle1() {
                             </div>
                         </div>
                     </section> */}
-                    <section className="layout-pt-sm layout-pb-lg">
-                        <div className="container">
+                    {/* <section className="layout-pt-sm layout-pb-lg"> */}
+                        {/* <div className="container"> */}
                             <div className="row y-gap-32">
-                                <div className="col-md-6">
-                                    {/* <img className="initial-img" src="/img/portfolio/single/3/1.jpg" alt="image"  /> */}
+                                {/* <div className="col-md-6">
+                                    <img className="initial-img" src="/img/portfolio/single/3/1.jpg" alt="image"  />
                                     <Link href="img/portfolio/single/4/1.jpg" className="gallery__item js-gallery" data-gallery="gallery1">
                                     <div className="ratio ratio-57:60">
                                                     <img className="absolute-full-center object-fit-cover" src="/img/about-1/about/tree-1.jpg" alt="image"  />
@@ -126,7 +126,7 @@ export default function PortfolioSingle1() {
                                                     <Icon.Plus className="icon" />
                                                 </div>
                                                 </Link>
-                                </div>
+                                </div> */}
                                 {/* <div className="col-12">
                                 <a href="img/portfolio/single/4/1.jpg" className="gallery__item js-gallery" data-gallery="gallery1">
                                     <div className="ratio ratio-57:60">
@@ -141,7 +141,19 @@ export default function PortfolioSingle1() {
                                     <div className="ratio ratio-37:40">
                                     <Link href="img/portfolio/single/4/1.jpg" className="gallery__item js-gallery" data-gallery="gallery1">
                                     <div className="ratio ratio-57:60">
-                                                    <img className="absolute-full-center object-fit-cover" src="/img/about-1/about/tree-4.jpg" alt="image"  />
+                                                    <img className="absolute-full-center object-fit-cover" src="/img/about-1/about/uragi-1.png" alt="image"  />
+                                                </div>
+                                                <div className="gallery__button">
+                                                    <Icon.Plus className="icon" />
+                                                </div>
+                                                </Link>
+                                    </div>
+                                </div>
+                                <div className="col-lg-4 col-md-6">
+                                    <div className="ratio ratio-37:40">
+                                    <Link href="img/about-1/about/uragi-1.png" className="gallery__item js-gallery" data-gallery="gallery1">
+                                    <div className="ratio ratio-57:60">
+                                                    <img className="absolute-full-center object-fit-cover" src="/img/about-1/about/uragi-2.png" alt="image"  />
                                                 </div>
                                                 <div className="gallery__button">
                                                     <Icon.Plus className="icon" />
@@ -153,19 +165,7 @@ export default function PortfolioSingle1() {
                                     <div className="ratio ratio-37:40">
                                     <Link href="img/portfolio/single/4/1.jpg" className="gallery__item js-gallery" data-gallery="gallery1">
                                     <div className="ratio ratio-57:60">
-                                                    <img className="absolute-full-center object-fit-cover" src="/img/about-1/about/tree-3.webp" alt="image"  />
-                                                </div>
-                                                <div className="gallery__button">
-                                                    <Icon.Plus className="icon" />
-                                                </div>
-                                                </Link>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4 col-md-6">
-                                    <div className="ratio ratio-37:40">
-                                    <Link href="img/portfolio/single/4/1.jpg" className="gallery__item js-gallery" data-gallery="gallery1">
-                                    <div className="ratio ratio-57:60">
-                                                    <img className="absolute-full-center object-fit-cover" src="/img/about-1/about/tree-5.jpg" alt="image"  />
+                                                    <img className="absolute-full-center object-fit-cover" src="/img/about-1/about/uragi-3.png" alt="image"  />
                                                 </div>
                                                 <div className="gallery__button">
                                                     <Icon.Plus className="icon" />
@@ -174,10 +174,10 @@ export default function PortfolioSingle1() {
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </section>
+                        {/* </div> */}
+                    {/* </section> */}
 
-                    <div className="layout-pb-lg">
+                    {/* <div className="layout-pb-lg">
                         <section>
                             <div className="container">
                                 <div className="related-nav py-30">
@@ -239,7 +239,7 @@ export default function PortfolioSingle1() {
                                 </div>
                             </div>
                         </section>
-                    </div>
+                    </div> */}
                     <div className="svg-shape">
                         <svg width={1920} height={60} viewBox="0 0 1920 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M0 30C0 13.4315 13.4315 0 30 0H1890C1906.57 0 1920 13.4315 1920 30V60H0V30Z" fill="#1A3454" />
